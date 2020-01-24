@@ -1,0 +1,71 @@
+<core:FragmentDefinition
+	xmlns:l="sap.ui.layout"
+	xmlns:f="sap.ui.layout.form"
+	xmlns:core="sap.ui.core"
+	xmlns="sap.m">
+	<Dialog title="Add Task" icon="sap-icon://task" contentWidth="500px">
+		<content>
+			<Panel>
+				<content>
+					<l:VerticalLayout width="100%">
+						<f:Form editable="true">
+							<f:layout>
+								<f:ResponsiveGridLayout/>
+							</f:layout>
+							<f:formContainers>
+								<f:FormContainer>
+								<f:formElements>
+									<f:FormElement>
+										<l:VerticalLayout>
+											<Label text="Title"/>
+											<Input id="txtTitleFTask" maxLength="50"/>
+											<l:layoutData>
+												<l:GridData span="L6 M6 S12"></l:GridData>
+											</l:layoutData>
+										</l:VerticalLayout>
+									</f:FormElement>
+									<f:FormElement>
+										<l:VerticalLayout>
+											<Label text="Title"/>
+											<DatePicker id="dpDateFTask" valueFormat="yyyy-MM-dd" displayFormat="dd/MM/yyyy"/>
+											<l:layoutData>
+												<l:GridData span="L6 M6 S12"></l:GridData>
+											</l:layoutData>
+										</l:VerticalLayout>
+									</f:FormElement>
+									<f:FormElement>
+										<l:VerticalLayout>
+											<Label text="Title"/>
+											<ComboBox id="cbStatusFTask" width="100%">
+												<core:Item key="001" text="In Progress"/>
+												<core:Item key="002" text="Stuck"/>
+												<core:Item key="003" text="Completed"/>
+											</ComboBox> 
+											<l:layoutData>
+												<l:GridData span="L6 M6 S12"></l:GridData>
+											</l:layoutData>
+										</l:VerticalLayout>
+									</f:FormElement>
+									<f:FormElement>
+										<l:VerticalLayout>
+											<Label text="Title"/>
+											<Slider id="slProgressFTask" min="0" max="100" value="50" progress="true" width="100%" showHandleTooltip="true"/>
+											<l:layoutData>
+												<l:GridData span="L6 M6 S12"></l:GridData>
+											</l:layoutData>
+										</l:VerticalLayout>
+									</f:FormElement>
+								</f:formElements>
+								</f:FormContainer>
+							</f:formContainers>
+						</f:Form>
+					</l:VerticalLayout>
+				</content>
+			</Panel>
+		</content>
+		<buttons>
+			<Button text="Save" type="Accept" press="onSaveForm"/>
+			<Button text="Cancel" press="onCloseForm"/>
+		</buttons>
+	</Dialog>
+</core:FragmentDefinition>

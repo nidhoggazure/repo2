@@ -1,0 +1,19 @@
+.dvStatus{
+	font-size: 0.875rem;
+	background-color: #ccc;
+	height: auto;
+	margin: auto;
+	width: 80px;
+	position: relative;
+	font-family: Arial;
+	line-height: 22px;
+	color: #ffffff;
+	padding: 6px 8px;
+	border-radius: 17px;
+}
+
+.dvStatus p{
+	margin: auto;
+	position: relative;
+	text-align: center;
+}s

@@ -1,0 +1,13 @@
+<mvc:View controllerName="com.dudev.ProjectManagement.controller.Main" 
+	xmlns:mvc="sap.ui.core.mvc" 
+	displayBlock="true" 
+	xmlns:f="sap.f"
+	xmlns:l="sap.ui.layout"
+	xmlns:dv="com.dudev.ProjectManagement.control"    
+	xmlns:tab="sap.ui.table"
+	xmlns="sap.m">
+	<Shell id="shell">
+		<App id="app">
+		</App>
+	</Shell>
+</mvc:View>

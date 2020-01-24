@@ -1,0 +1,67 @@
+<core:View controllerName="com.dudev.ProjectManagement.controller.UserDetail" 
+	xmlns:dv="com.dudev.ProjectManagement.control"
+	xmlns:core="sap.ui.core" 
+	xmlns:m="sap.m"
+	xmlns:l="sap.ui.layout"
+	xmlns="sap.uxap">
+	<m:Page showHeader="true" title="{i18n>appTitle}" showNavButton="true" navButtonPress="onBack">
+		<ObjectPageLayout showTitleInHeaderContent="true">
+			<headerTitle>
+				<ObjectPageHeader 
+					headerDesign="Dark"
+					objectTitle="{/User/Name}"
+					objectSubtitle="{/User/Role}"
+					objectImageURI="{/User/Photo}"
+					objectImageShape="Circle"
+					isObjectTitleAlwaysVisible="false"
+					isObjectSubtitleAlwaysVisible="false">
+					<actions>
+						<m:Button text="New task" press="onAddTask" icon="sap-icon://add" type="Emphasized"></m:Button>
+					</actions>
+				</ObjectPageHeader>
+			</headerTitle>
+			<headerContent>
+				<l:VerticalLayout>
+					<m:ObjectAttribute title="Project" text="{/User/Project}"/>
+					<m:ObjectAttribute title="Email" text="{/User/Email}"/>
+					<m:ObjectAttribute title="Phone" text="{/User/Phone}"/>
+					<m:ObjectAttribute title="Manager" text="{/User/Manager}"/>
+				</l:VerticalLayout>
+			</headerContent>
+			<sections>
+				<ObjectPageSection title="Tasks">
+					<subSections>
+						<ObjectPageSubSection>
+							<blocks>
+								<m:Table items="{/Tasks}">
+									<m:columns>
+										<m:Column>
+											<m:Label text="Task"/>
+										</m:Column>
+										<m:Column>
+											<m:Label text="Progress"/>
+										</m:Column>
+										<m:Column>
+											<m:Label text="Status"/>
+										</m:Column>
+									</m:columns>
+									<m:items>
+										<m:ColumnListItem>
+											<m:cells>
+												<m:ObjectIdentifier title="{Name}" text="{Date}"/>
+												<m:ProgressIndicator percentValue="{Progress}" displayValue="{Progress}%"
+													showValue="true" state="None"/>
+												<dv:DVStatus text="{Status}" color="{StatusColor}"/>
+											</m:cells>
+										</m:ColumnListItem>
+									</m:items>
+								</m:Table>
+							</blocks>
+						</ObjectPageSubSection>
+					</subSections>
+				</ObjectPageSection>
+			</sections>
+		</ObjectPageLayout>
+	</m:Page>
+	
+</core:View>

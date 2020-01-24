@@ -1,0 +1,46 @@
+{
+	"Team" : [
+		{
+		"Code" : "USER1",
+		"Name" : "Jane Appleseed",
+		"Role" : "Lead Designer",
+		"Photo" : "http://dudev.mx/assets/img/face1.jpg",
+		"Email" : "janea@sample.com"
+		},
+		{
+		"Code" : "USER2",
+		"Name" : "Kristin Oliver",
+		"Role" : "Full stack developer",
+		"Photo" : "http://dudev.mx/assets/img/face3.jpg",
+		"Email" : "koliver@sample.com"
+		},
+		{
+		"Code" : "USER3",
+		"Name" : "David Collen",
+		"Role" : "Project Manager",
+		"Photo" : "http://dudev.mx/assets/img/face2.jpg",
+		"Email" : "dcollen@sample.com"
+		},
+		{
+		"Code" : "USER4",
+		"Name" : "Nora Hill",
+		"Role" : "Front end developer",
+		"Photo" : "http://dudev.mx/assets/img/face4.jpg",
+		"Email" : "nhill@sample.com"
+		},
+		{
+		"Code" : "USER5",
+		"Name" : "Chris Howell",
+		"Role" : "Lead Test",
+		"Photo" : "http://dudev.mx/assets/img/face5.jpg",
+		"Email" : "chowell@sample.com"
+		},
+		{
+		"Code" : "USER6",
+		"Name" : "Patrick Herrera",
+		"Role" : "Back end developer",
+		"Photo" : "http://dudev.mx/assets/img/face8.jpg",
+		"Email" : "pherrera@sample.com"
+		}
+	]
+}

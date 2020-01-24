@@ -1,0 +1,54 @@
+<mvc:View controllerName="com.dudev.ProjectManagement.controller.UserList" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns:f="sap.f"
+	xmlns:l="sap.ui.layout" xmlns:dv="com.dudev.ProjectManagement.control" xmlns:tab="sap.ui.table" xmlns="sap.m">
+	<Page id="page" title="{i18n>title}">
+		<content>
+			<Panel headerText="{i18n>panelHeader}" class="sapUiResponsiveMargin" width="auto">
+				<content>
+					<SearchField id="txtSearch" liveChange="onSearch" width="100%" placeholder="{i18n>searchText}"></SearchField>
+				</content>
+			</Panel>
+			<Panel class="sapUiResponsiveMargin" width="auto">
+				<content>
+					<Table id="tabTeam" items="{/Team}">
+						<!-- Table columns -->
+						<columns>
+							<Column>
+								<Label text="Name" design="Bold"></Label>
+							</Column>
+							<Column minScreenWidth="Tablet" demandPopin="true">
+								<Label text="Email" design="Bold"></Label>
+							</Column>
+							<!--
+										<tab:Column>
+										</tab:Column>    
+										-->
+							<Column></Column>
+						</columns>
+						<!-- Table rows -->
+						<items>
+							<!--type="Active"-->
+							<ColumnListItem vAlign="Middle" press="onSelect" type="Navigation">
+								<cells>
+									<l:HorizontalLayout>
+										<l:content>
+											<f:Avatar src="{Photo}" displaySize="M" displayShape="Circle"></f:Avatar>
+											<ObjectIdentifier class="sapUiSmallMarginBegin sapUiSmallMarginTop" title="{Name}" text="{Role}" titleActive="true"></ObjectIdentifier>
+										</l:content>
+									</l:HorizontalLayout>
+									<!--
+												<Text text="{Email}"></Text>
+												-->
+									<DisplayListItem label="{Email}" press="_triggerEmail" type="Active"></DisplayListItem>
+									<dv:DVStatus text="Prueba" color="#F1F5F9"></dv:DVStatus>
+								</cells>
+							</ColumnListItem>
+						</items>
+					</Table>
+					<!--
+												<l:ColumnElementData></l:ColumnElementData>
+												-->
+				</content>
+			</Panel>
+		</content>
+	</Page>
+</mvc:View>
